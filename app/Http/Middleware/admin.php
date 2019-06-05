@@ -36,6 +36,6 @@ class admin
           'password' => $request->get('pass')
         );
 
-
+        
     }
 }
