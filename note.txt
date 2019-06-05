@@ -56,15 +56,4 @@ https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
 # Compile SASS with Laravel Mix
 -- npm install --save
 
-
--- npm WARN deprecated browserslist
--- https://stackoverflow.com/questions/51702758/npm-warn-deprecated-browserslist2-11-3-browserslist-2-could-fail-on-reading-br
--- npm uninstall cordova ionic
--- npm cache clean -f
-
-
-// error: ajv-keywords@3.2.0 requires a peer of ajv@^6.0.0
--- npm install ajv@^6.0.0
-
-
--- npm i peer --save
+-- npm run dev
