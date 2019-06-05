@@ -21,15 +21,15 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('pages.home');
-})->name('pages.home');
+})->name('pages.home')->middleware('auth');
 
 
 Route::get('/about', function () {
     return view('pages.about');
-})->name('pages.about');
+})->name('pages.about')->middleware('auth');
 
 Route::get('/company', function () {
     return view('pages.company');
-})->name('pages.company');
+})->name('pages.company')->middleware('auth');
 
 
