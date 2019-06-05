@@ -1,0 +1,11 @@
+https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
+
+
+-- php artisan migrate
+-- php artisan make:seeder UsersTablesSeeder
+
+
+-- composer dump-autoload
+
+
+-- php artisan make:auth

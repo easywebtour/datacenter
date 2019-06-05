@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/uploadfile', 'UploadfileController@index');
+Route::post('/uploadfile', 'UploadfileController@upload');
+Route::get('/main', 'MainController@index');
+Route::post('/main/checklogin', 'MainController@checklogin');
+Route::get('main/successlogin', 'MainController@successlogin');
+Route::get('main/logout', 'MainController@logout');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
