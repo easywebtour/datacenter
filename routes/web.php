@@ -11,48 +11,15 @@
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
-*/
-
-Route::get('/', function(){
-     return view('pages.home');
-
-})->name('page.home')->middleware('auth');
-
-
-Route::get('/company', function(){
-    return view('pages.company');
-})->name('page.company')->middleware('auth');
-
-/*Route::get('/home', function(){
-     return view('home');
-});*/
-
-/*Route::get('/logout', function(){
-     return back();
-});
-Route::post('logout', 'AuthController@logout');
-*/
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('pages.home');
 
-
-/*Route::get('/admin', function () {
+Route::get('/company', function () {
     return view('welcome');
-});*/
 
-// Route::get('/login', 'AuthController@index');
-// Route::post('/login', 'AuthController@checklogin')->name('auth.checklogin');
-
-/*Route::post('/uploadfile', 'UploadfileController@upload');
-Route::get('/main', 'MainController@index');
-Route::post('/main/checklogin', 'MainController@checklogin');
-Route::get('main/successlogin', 'MainController@successlogin');
-Route::get('main/logout', 'MainController@logout');
-
-
-Route::get('/home', 'HomeController@index')->name('home');
-*/
+})->name('pages.company');

@@ -1,6 +1,6 @@
 <?php
 
-namespace easywebtour\Http\Middleware;
+namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;

@@ -1,10 +1,3 @@
-@extends('index')
-
-
-@section('content')
-
-    @component('partials.hero')
-        Company Page
-    @endcomponent
-
-@endsection
+<div class="title m-b-md">
+    Page Company
+</div>

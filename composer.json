@@ -23,7 +23,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "easywebtour\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

@@ -2,12 +2,6 @@
 
 @section('content')
 <div class="container">
-
-
-    <div class="login-wrap">
-        
-    
-
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -18,11 +12,11 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="login" class="col-sm-4 col-form-label text-md-right">{{ __('Username') }}</label>
+                            <label for="username" class="col-sm-4 col-form-label text-md-right">{{ __('Username') }}</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="chong" required autofocus>
-                                <!-- {{ old('username') }} -->
+                                <input id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
+
                                 @if ($errors->has('username'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('username') }}</strong>
@@ -35,7 +29,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="1234" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -72,8 +66,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
     </div>
 </div>
 @endsection

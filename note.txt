@@ -4,11 +4,12 @@ https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
 -- php artisan migrate // สร้าง
 -- php artisan migrate:refresh // ล้าง
 -- php artisan migrate:fresh // เปลี่ยน
+-- php artisan migrate:rollback
+-- php artisan migrate:reset
 
 
 -- php artisan make:seeder UsersTablesSeeder
 -- php artisan make:seeder ItemsTablesSeeder
-
 
 -- composer dump-autoload
 
@@ -39,13 +40,10 @@ https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
 
 # สร้าง Controller
 -- php artisan make:controller CompanyController --resource //--invokable
--- php artisan make:controller AuthController --resource //--invokable
 
 
 -- npm install
 -- npm run dev
 
-
--- git pull
--- git checkout -b lesson-1
--- git push origin lesson-1
+# git
+-- git
