@@ -17,9 +17,14 @@
 */
 
 Route::get('/', function(){
-     return view('home');
-});
+     return view('pages.home');
 
+})->name('page.home')->middleware('auth');
+
+
+Route::get('/company', function(){
+    return view('pages.company');
+})->name('page.company')->middleware('auth');
 
 /*Route::get('/home', function(){
      return view('home');

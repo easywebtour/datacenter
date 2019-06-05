@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace easywebtour\Http\Middleware;
 
 use Closure;
 
@@ -13,8 +13,12 @@ class admin
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $guard=null)
     {
+        if (Auth::guard($guard)->check()) {
+            return redirect('/');
+        }
+
         return $next($request);
     }
 
@@ -34,7 +38,4 @@ class admin
 
 
     }
-
-
-
 }

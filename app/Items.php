@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace easywebtour;
 
 use Illuminate\Database\Eloquent\Model;
 

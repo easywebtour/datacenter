@@ -16,6 +16,9 @@ https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
 -- php artisan make:auth
 
 
+-- php artisan app:name easywebtour
+
+
 # สร้าง Models
 -- php artisan make:model Items
 -- จากนั้นเพิ่ม protected $table = ‘items’; เข้าไปใน Class Items
@@ -29,13 +32,15 @@ https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
 -- php artisan make:seeder ItemsTablesSeeder
 
 
-
 # สร้าง Middleware
 -- php artisan make:middleware admin
 -- php artisan make:middleware AuthAdmin
 
 
-
 # สร้าง Controller
 -- php artisan make:controller CompanyController --resource //--invokable
 -- php artisan make:controller AuthController --resource //--invokable
+
+
+-- npm install
+-- npm run dev
