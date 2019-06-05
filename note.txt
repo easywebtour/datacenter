@@ -46,4 +46,8 @@ https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
 -- npm run dev
 
 # git
--- git
+
+-- git pull
+-- git checkout -b lesson-2
+-- git push origin lesson-2
+-- git branch -a
