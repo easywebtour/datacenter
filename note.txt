@@ -1,11 +1,41 @@
 https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
 
 
--- php artisan migrate
+-- php artisan migrate // สร้าง
+-- php artisan migrate:refresh // ล้าง
+-- php artisan migrate:fresh // เปลี่ยน
+
+
 -- php artisan make:seeder UsersTablesSeeder
+-- php artisan make:seeder ItemsTablesSeeder
 
 
 -- composer dump-autoload
 
 
 -- php artisan make:auth
+
+
+# สร้าง Models
+-- php artisan make:model Items
+-- จากนั้นเพิ่ม protected $table = ‘items’; เข้าไปใน Class Items
+
+
+# สร้าง Factory
+-- php artisan make:factory ItemsFactory --model=Items
+
+
+# สร้าง Seeding
+-- php artisan make:seeder ItemsTablesSeeder
+
+
+
+# สร้าง Middleware
+-- php artisan make:middleware admin
+-- php artisan make:middleware AuthAdmin
+
+
+
+# สร้าง Controller
+-- php artisan make:controller CompanyController --resource //--invokable
+-- php artisan make:controller AuthController --resource //--invokable
