@@ -1,8 +1,10 @@
 @extends('index')
 
 @section('content')
+
     @component('layouts.hero')
-        Page Company
+        Page About
     @endcomponent
+
 
 @endsection

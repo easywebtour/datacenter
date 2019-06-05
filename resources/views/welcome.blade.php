@@ -82,6 +82,7 @@
                     My App
                 </div>
                 @include('layouts.nav')
+
             </div>
         </div>
     </body>

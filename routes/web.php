@@ -11,15 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('pages.home');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('pages.home');
+// Route::get('/home', 'HomeController@index')->name('pages.home');
+
+Route::get('/', function () {
+    return view('pages.home');
+})->name('pages.home');
+
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('pages.about');
 
 Route::get('/company', function () {
-    return view('welcome');
-
+    return view('pages.company');
 })->name('pages.company');
+
+
