@@ -15,25 +15,36 @@
 //     return view('pages.home');
 // });
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+    'verify' => true,
+    'reset' => false
+]);
 
 // Route::get('/home', 'HomeController@index')->name('pages.home');
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('pages.home')->middleware('auth');
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/', function () {
+        return view('pages.home');
+    })->name('pages.home');
+
+    Route::get('/about', function () {
+        return view('pages.about');
+    })->name('pages.about');
+
+    Route::get('/company', function () {
+        return view('pages.company');
+    })->name('pages.company');
+
+    Route::get('/wholesale', function () {
+        return view('pages.wholesale');
+    })->name('pages.wholesale');
+
+});
 
 
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('pages.about')->middleware('auth');
 
-Route::get('/company', function () {
-    return view('pages.company');
-})->name('pages.company')->middleware('auth');
-
-Route::get('/wholesale', function () {
-    return view('pages.wholesale');
-})->name('pages.wholesale')->middleware('auth');
 
 
