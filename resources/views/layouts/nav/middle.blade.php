@@ -1,7 +1,7 @@
 <ul class="navbar-nav navbar-sidenav">
     <li class="nav-item">
         <a class="nav-link" href="{{ route('pages.home') }}">
-            <i class="fa fa-fw fa-dashboard"></i>
+            <i class="fa fa-home"></i>
             <span class="nav-link-text">Home</span>
         </a>
     </li>
