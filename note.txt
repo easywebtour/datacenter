@@ -61,3 +61,7 @@ https://www.webslesson.info/2018/03/simple-login-system-in-laravel.html
 
 # set: fortawesome
 -- npm i --save @fortawesome/fontawesome-free
+
+
+# ser: git Security Alerts
+-- npm i js-yaml
