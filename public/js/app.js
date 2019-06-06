@@ -49201,7 +49201,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/assets/js/components/ExampleComponent.vue"));
 var app = new Vue({
-  el: '#app'
+  el: '#doc'
 });
 
 /***/ }),
