@@ -1,7 +1,6 @@
 @extends('index')
 
 
-
 @section('content')
 
 
@@ -133,14 +132,31 @@
                     {{-- end: Header -> top --}}
 
                     {{-- Header -> tabs --}}
-                    <ul class="page-datalist-tabs nav mb-3">
-                        <li class="nav-item active"><a href="#" class="nav-link"><span class="nav-text">ทั้งหมด</span><span class="nav-count">(0)</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="nav-text">ใช้งาน</span><span class="nav-count">(0)</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="nav-text">รอการตรวจสอบ</span><span class="nav-count">(0)</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><span class="nav-text">ระงับ</span><span class="nav-count">(0)</span></a></li>
+                    <nav class="d-flex mb-2">
+                        <div class="mr-auto mb-3">
+                            <ul class="page-datalist-tabs nav">
+                                <li class="nav-item active"><a href="#" class="nav-link"><span class="nav-text">ทั้งหมด</span><span class="nav-count">(0)</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link"><span class="nav-text">ใช้งาน</span><span class="nav-count">(0)</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link"><span class="nav-text">รอการตรวจสอบ</span><span class="nav-count">(0)</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link"><span class="nav-text">ระงับ</span><span class="nav-count">(0)</span></a></li>
 
-                    </ul>
+                            </ul>
+                        </div>
 
+                        <div class="ml-auto">
+
+                            <ul class="page-datalist-checkbox nav">
+                                <li class="nav-item active">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="" value="" checked />
+                                        <span class="text">ทั้งหมด</span>
+                                        <span class="count">(0)</span>
+                                    </label>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                     {{-- end: Header -> tabs --}}
 
 
