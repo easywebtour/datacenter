@@ -81,7 +81,7 @@
 
         </header>
 
-        <main id="page-main" class="page-main">
+        <main id="page-main" class="page-main layout__box o__flexes-to-1 o__has-rows">
             @yield('content')
         </main>
     </div>

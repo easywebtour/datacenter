@@ -20,6 +20,8 @@
     --navigation-bg: #ebebeb;
     --navigation-color: #888888;
     --navigation-color-hover: #2362C8;
+
+    --link-color-active: #286efa
 }
 
 
@@ -73,6 +75,11 @@ form, input, select, textarea, button {
     display: flex;
     flex-direction: column;
 }
+.layout__box.o__has-columns {
+    display: flex;
+    flex-direction: row;
+}
+
 .layout__media {
     display: flex;
     align-items: flex-start;
@@ -172,6 +179,8 @@ body{
 .page-main{
     transition: margin-left 0.2s ease-in;
     margin-left: var(--navigation-width);
+
+    min-height: calc( 100vh - var(--topbar-height));
 }
 
 
@@ -303,3 +312,262 @@ body.is-pushed-left .page-navigation-sidenav .nav-link-text{
     display: block;
     opacity: 1;
 }
+
+
+
+svg{
+    fill: currentColor
+}
+
+.navleft {
+    background-color: #f6f6f6;
+    color: #888;
+    width: 230px;
+}
+
+.navleft-header-title {
+    font-size: 22px;
+    line-height: 30px;
+    color: #222;
+}
+
+.navleft-sections {
+    padding: 4px 0;
+}
+
+.navleft-nav {
+    box-sizing: border-box;
+    /* padding: 0 1rem; */
+    position: relative;
+}
+
+.navleft-sub{
+    padding-left: 8px;
+    padding-bottom: 10px;
+
+}
+.navleft-dropdown{
+    display: none
+}
+
+
+.navleft-link{
+    color: #222;
+    padding: 6px 1rem;
+    font-weight: 400;
+    font-size: 13px;
+    display: flex;
+
+}
+.navleft-link.active{
+    color:#286efa
+}
+.navleft-link:hover{
+    text-decoration: none;
+    color:#286efa
+}
+.navleft-title{
+    font-weight:bold
+}
+.navleft-count{
+    color: #888;
+    display:block;
+    width: 26px;
+    text-align: right
+}
+.navleft-item.is-open .navleft-arrow{
+    transform: rotate(90deg);
+}
+.navleft-item.is-open .navleft-dropdown{
+    display: block
+}
+
+.navleft-sub .navleft-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: calc(100% - 26px);
+}
+
+
+
+.page-datalist-tabs .nav-link{
+    border-bottom: 2px solid transparent;
+    color: #222;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 20px;
+    padding: 4px 0;
+    transition: border-color linear .2s;
+}
+
+.page-datalist-tabs .active .nav-link{
+    border-bottom-color: #286efa;
+}
+.page-datalist-tabs .nav-count{
+    color: #999;
+    margin-left: 4px;
+    font-weight: normal
+}
+
+.page-datalist-filter .nav-item{
+    margin-left: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: nowrap;
+}
+.page-datalist-filter .nav-item:first-child {
+    margin-left: 0;
+}
+
+.page-datalist-filter .filter-item {
+    background-color: rgb(245, 246, 247);
+    border: 1px solid rgb(218, 221, 225);
+    color: rgb(68, 73, 80);
+    border-radius: .25rem;
+}
+.page-datalist-filter .filter-item .filter-item-input.w {
+    background-color: #fff;
+}
+.page-datalist-filter .filter-item-btn{
+    height: 34px;
+    padding:0 12px;
+    line-height: 34px;
+}
+
+.filter-item-label {
+    height: 34px;
+    padding-left: 12px;
+    line-height: 34px;
+    margin-right: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.filter-item-input {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 12px;
+    height: 34px;
+    line-height: 34px;
+}
+.filter-item-input, .filter-item-input:hover, .filter-item-input:focus, .filter-item-input:active {
+    background-color: transparent;
+    border-width: 0;
+    box-shadow: none;
+}
+
+
+.datatable{margin: 0;width: 100%}
+.datatable td, .datatable th {
+    padding: 8px 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,.1)
+}
+.datatable td:first-child{
+  padding-left: 1rem
+}
+.datatable .td-seq,
+.datatable .td-date,
+.datatable .td-checkbox,
+.datatable .td-status,
+.datatable .td-avatar,
+.datatable .td-number,
+.datatable .td-action{width: 10px;white-space: nowrap;}
+.datatable .td-date{width: 80px}
+.datatable .td-number{text-align: center;width: 70px}
+.datatable .td-status{text-align: center;}
+
+.datatable .td-gray{
+    background-color: #fafafb;
+    border-color: #dddfe2;
+}
+.datatable th,
+.datatable th>a{
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #888;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.page-datalist-header-table__fixed{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.page-datalist-header-table__fixed .datatable th{
+border-bottom-width: 0
+}
+.datatable th .svg-icon {
+    margin-top: -4px;
+}
+.datatable th .svg-icon+.text {
+    margin-left: 6px;
+}
+
+.datatable th .sort {
+    margin-left: 4px;
+    display: none;
+    transition: .4s transform;
+}
+
+.datatable th>a.desc>.sort, .datatable th>a.asc>.sort, .datatable th.active>a .sort {
+    display: inline-block;
+}
+
+
+.ui-status{
+
+    padding: 0 6px;
+    line-height: 22px;
+    color: #fff;
+    border-radius: 2px;
+    position: relative;
+    white-space: nowrap;
+    background-color: #0077dd;
+    font-size: 13px;
+    cursor: default;
+    text-transform: uppercase;
+}
+span.ui-status{
+    display: inline-block;
+}
+.draft.ui-status{
+    background-color: #f44336
+}
+.publish.ui-status{
+    background-color: #4caf50
+}
+
+.alert-state>div{
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    color: #999999;
+
+}
+.alert-state .state-icon svg{
+    width: 40px;
+    height: 40px;
+}
+
+.alert-state .state-title{
+    font-size:14px;
+    font-weight: normal
+}
+
+
+/**/
+/* loading__indicato */
+/**/
+
+.loading__indicator{vertical-align:middle;animation-name:reveal_loading_indicator;animation-duration:.2s;animation-timing-function:linear;animation-iteration-count:1}
+.nav__counter-text,.nav__link,.quick-action{vertical-align:bottom}.loading__indicator.o__tiny{width:15px;height:15px;display:inline-block}
+.loading__indicator.o__tiny.o__inline{margin:0 7px 0 0}
+
+.loading__indicator.o__small{width:20px;height:20px;margin:0 auto}
+.loading__indicator.o__large{width:24px;height:24px}
+.loading__indicator__graphic{width:100%;height:100%;animation-name:rotate;animation-duration:550ms;animation-timing-function:linear;animation-iteration-count:infinite}
+
+@keyframes reveal_loading_indicator{0%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}
+@keyframes rotate{0%{transform:rotate(0)}8.3%{transform:rotate(30deg)}16.7%{transform:rotate(60deg)}25%{transform:rotate(90deg)}33.3%{transform:rotate(120deg)}41.7%{transform:rotate(150deg)}50%{transform:rotate(180deg)}58.3%{transform:rotate(210deg)}66.7%{transform:rotate(240deg)}75%{transform:rotate(270deg)}83.3%{transform:rotate(300deg)}91.7%{transform:rotate(330deg)}100%{transform:rotate(360deg)}}
