@@ -32,4 +32,8 @@ Route::get('/company', function () {
     return view('pages.company');
 })->name('pages.company')->middleware('auth');
 
+Route::get('/wholesale', function () {
+    return view('pages.wholesale');
+})->name('pages.wholesale')->middleware('auth');
+
 
