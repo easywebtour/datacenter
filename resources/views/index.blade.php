@@ -21,47 +21,60 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
-<body>
-    <div id="doc">
+<body @guest class="logged-out" @else class="logged-in" @endguest>
 
+    <div id="doc">
+            @auth
         <header id="page-header" class="page-header">
 
-            <nav id="page-topbar" class="navbar navbar-expand-md navbar-dark page-topbar">
+            <div id="page-topbar" class="page-topbar">
+                <nav class="navbar navbar-expand-md navbar-dark">
 
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <h1 style="line-height: 1;font-size: 14px;">Datacenter</h1>
-                    <h2 style="line-height: 1;font-size: 10px;">Easy Web Tour</h2>
-                    {{-- {{ config('app.name', 'Easy Web Tour') }} --}}
-                </a>
-
-
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('logout') }}"
-                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                {{ __('Log out') }}
-
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf
-                            </form>
-                        </li>
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <h1 style="line-height: 1;font-size: 14px;">Datacenter</h1>
+                        <h2 style="line-height: 1;font-size: 10px;">Easy Web Tour</h2>
+                        {{-- {{ config('app.name', 'Easy Web Tour') }} --}}
+                    </a>
 
 
-                    </ul>
-                </div>
-            </nav>
 
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">
+
+                        </ul>
+
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Authentication Links -->
+
+                            @guest
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @else
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    {{ __('Log out') }}
+
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf
+                                </form>
+                            </li>
+
+                            @endguest
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            @auth
             <button type="button" id="page-navigation-trigger" class="page-navigation-trigger"><span></span></button>
             <nav id="page-navigation" class="page-navigation">
 
@@ -78,8 +91,11 @@
                     </div>
                 </div>
             </nav>
+            @endauth
+
 
         </header>
+        @endauth
 
         <main id="page-main" class="page-main layout__box o__flexes-to-1 o__has-rows">
             @yield('content')

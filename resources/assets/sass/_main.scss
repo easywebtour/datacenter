@@ -226,13 +226,23 @@ body{
 /* page topbar */
 /**/
 .page-topbar{
+    height: var(--topbar-height);
+}
+.page-topbar>.navbar{
     background: var(--topbar-bg);
     color: var(--topbar-color);
-
-    height: var(--topbar-height);
     z-index: 300;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--topbar-height);
+}
+body.logged-in .page-topbar>.navbar{
     padding-left: var(--navigation-width);
 }
+
 
 /**/
 /* page navigation */
@@ -255,10 +265,9 @@ body{
 }
 
 
-.page-main{
+body.logged-in .page-main{
     transition: margin-left 0.2s ease-in;
     margin-left: var(--navigation-width);
-
     min-height: calc( 100vh - var(--topbar-height));
 }
 
@@ -605,3 +614,79 @@ border-bottom-width: 0
 }
 
 
+
+
+
+.page-error{
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%
+}
+
+.page-error-container{
+    min-width: 336px;
+}
+
+.page-error-icon{
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-align-items: center;
+    align-items: center;
+
+
+}
+
+.page-error-icon__error404 svg {
+    margin-bottom: 12px;
+    width: 180px;
+    height: 120px;
+    fill: #b3b3b3
+}
+
+.page-error-header {
+    color: #2c2c2c;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.page-error-description {
+    margin-bottom: 24px;
+    color: #8e8e8e;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+.vertical-align-items-center {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    min-height: calc( 100vh - var(--topbar-height));
+    position: relative;
+}
+ .vertical-align-items-center:before,  .vertical-align-items-center:after {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    content: '';
+    display: block;
+}
