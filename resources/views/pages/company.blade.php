@@ -34,7 +34,9 @@
         @component('components.datatable', [
             'title' => 'ลูกค้า',
 
-
+            'options' => [
+                "url" => '555'
+            ]
         ])
 
             @slot('actions_right')

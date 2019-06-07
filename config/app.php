@@ -209,6 +209,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Set: Libraries
+        'Fn'   => App\Library\Fn::class,
+
     ],
 
 ];
