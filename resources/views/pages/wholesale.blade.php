@@ -16,7 +16,6 @@
                 <h1 class="navleft-header-title">โฮเซลล์</h1>
             </div>
 
-
             <div class="navleft-sections layout__box">
 
                 <ul class="navleft-nav">
@@ -98,8 +97,7 @@
     </div>
     {{-- end: navleft --}}
 
-
-    <div class="layout__box o__has-rows o__flexes-to-1 main__content-outlet">
+    <div class="layout__box o__has-rows o__flexes-to-1">
 
 
 

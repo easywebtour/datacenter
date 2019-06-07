@@ -14115,6 +14115,7 @@ span.ui-status {
   position: relative;
   padding: 20px;
   color: #999999;
+  display: none;
 }
 
 .alert-state .state-icon svg {
@@ -14863,7 +14864,6 @@ svg {
   .page-login {
     flex-shrink: 0;
     background: #fff;
-    border: 1px solid #dadce0;
     border-radius: 8px;
     display: block;
     margin: 0 auto;
@@ -14960,5 +14960,9 @@ svg {
 
 .form-icons-wrapper .fa {
   font-size: 18px;
+}
+
+body.logged-out {
+  background-color: #f6f6f6;
 }
 
