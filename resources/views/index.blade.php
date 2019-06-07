@@ -8,18 +8,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <title>@if (trim($__env->yieldContent('title')))@yield('title') | @endif {{ config('app.name', 'Laravel') }}</title>
 
-
-    <!-- font-awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body @guest class="logged-out" @else class="logged-in" @endguest>
 
@@ -35,7 +29,6 @@
                         <h2 style="line-height: 1;font-size: 10px;">Easy Web Tour</h2>
                         {{-- {{ config('app.name', 'Easy Web Tour') }} --}}
                     </a>
-
 
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -58,13 +51,17 @@
                             @else
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('logout') }}"
+
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">ออกจากระบบ</a>
+
+
+                                {{-- <a class="nav-link" href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     {{ __('Log out') }}
 
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf
-                                </form>
+                                </form> --}}
                             </li>
 
                             @endguest
@@ -103,8 +100,34 @@
     </div>
 
 
+    <div class="modals">
+
+    {{-- set model: logout --}}
+    @component('components.model', [
+        'id' => 'logoutModal',
+        'form'=> [
+            'action'=> route('logout'),
+            'method'=> 'POST'
+        ],
+        'title' => "ออกจากระบบ"
+    ])
+
+        ยืนยันการออกจากระบบหรือไม่?
+
+        @slot('buttons')
+
+            <button type="submit" class="btn btn-primary">ออกจากระบบ</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+        @endslot
+    @endcomponent
+
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
+
     <script>
 
 
@@ -114,6 +137,10 @@
 
                 $('body').toggleClass('is-pushed-left');
             });
+
+
+
+
         })
 
     </script>

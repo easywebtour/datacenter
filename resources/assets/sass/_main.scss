@@ -690,3 +690,126 @@ border-bottom-width: 0
     content: '';
     display: block;
 }
+
+.page-login{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 601px){
+    .page-login{
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+        background: #fff;
+        border: 1px solid #dadce0;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+        min-height: 0;
+        width: 400px;
+    }
+}
+
+
+.page-login-form{
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 24px 24px 36px;
+}
+@media (min-width: 450px){
+
+    .page-login-form{
+        padding: 48px 40px 36px;
+    }
+}
+.page-login h1{
+    color: #202124;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.form-group{
+    position: relative;
+}
+.form-textbox{
+    padding-top: 18px;
+    height: auto;
+}
+/* .form-textbox:focus, .form-textbox:hover{
+    box-shadow: none
+} */
+.form-textbox ~ .form-label{
+    position: absolute;
+    top: 12px;
+    left: 0.75rem;
+    color: #888;
+    pointer-events: none;
+    padding: 0;
+    z-index: 1;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transition-duration: .125s;
+    transition-duration: .125s;
+
+    pointer-events: none;
+
+
+}
+.form-textbox.form-icon-left ~ .form-label {
+    left: 50px;
+}
+
+.form-textbox:not([disabled]):focus ~ .form-label,
+.form-textbox:not([disabled]):valid[required] ~ .form-label,
+.form-textbox:not([disabled])[placeholder] ~ .form-label{
+
+    top: 4px;
+    color: #666;
+    font-size: 12px;
+    font-weight: bold
+}
+.form-textbox.form-icon-left {
+    padding-left: 49px;
+}
+
+.form-textbox ~ .form-icons-wrapper {
+    position: absolute;
+    top: .94118rem;
+    line-height: 0;
+    right: 1.11765rem;
+    z-index: 1;
+    vertical-align: middle;
+    text-align: center;
+}
+.form-textbox.form-icon-left ~ .form-icons-wrapper-left {
+    top: 50%;
+    left: 11px;
+    width: 30px;
+    right: auto;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.form-icons-wrapper .fa{
+    font-size:18px;
+}

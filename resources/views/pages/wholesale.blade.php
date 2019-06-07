@@ -1,5 +1,6 @@
 @extends('index')
 
+@section('title', 'โฮเซลล์')
 
 @section('content')
 

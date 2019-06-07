@@ -1,5 +1,6 @@
 @extends('index')
 
+
 @section('content')
 
     <div class="vertical-align-items-center">

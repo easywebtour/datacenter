@@ -1,7 +1,8 @@
 @extends('index')
 
-@section('content')
+@section('title', 'Error 404: Asset not found')
 
+@section('content')
 
     <div class="page-error vertical-align-items-center">
 
@@ -15,6 +16,5 @@
 
         </div>
     </div>
-
 
 @endsection
