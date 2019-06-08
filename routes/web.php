@@ -34,13 +34,9 @@ Route::group(['middleware' => ['auth']], function () {
         return view('pages.about');
     })->name('pages.about');
 
-    Route::get('/company', function () {
-        return view('pages.company');
-    })->name('pages.company');
+    Route::get('/company', 'CompanyController@index')->name('pages.company');
 
-    Route::get('/wholesale', function () {
-        return view('pages.wholesale');
-    })->name('pages.wholesale');
+    Route::get('/wholesale', 'ProductController@index')->name('pages.wholesale');
 
 });
 

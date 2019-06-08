@@ -81,7 +81,7 @@
     <div class="page-datalist-body mx-3 mb-4">
         <div class="entity-list">
             <table class="datatable">
-                <tbody role="table__result"></tbody>
+                <tbody role="results">{{ $results }}</tbody>
             </table>
         </div>
     </div>

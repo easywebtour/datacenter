@@ -11,7 +11,7 @@
 
         @slot('nav')
             @component('components.navleft', [
-                'title' => 'ลูกค้า',
+                'title' => 'แพ็คเกจทัวร์',
 
                 "items" => [
 
@@ -32,7 +32,7 @@
         @endslot
 
         @component('components.datatable', [
-            'title' => 'ลูกค้า',
+            'title' => 'แพ็คเกจทัวร์',
 
             'options' => [
                 "url" => '555'
@@ -77,7 +77,7 @@
                             <td class="td-name active">
                                 <div class="row no-gutters">
 
-                                    <div class="col-auto" style="width: 75px"><div class="pic rounded squared"></div></div>
+                                    <div class="col-auto" style="width: 128px"><div class="pic rounded squared"></div></div>
 
                                     <div class="col"><div class="pl-2">
 
