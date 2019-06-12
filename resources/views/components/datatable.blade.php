@@ -1,7 +1,8 @@
 {{-- Datalist --}}
-<div class="page-datalist" data-plugin="datatable"@if ( !empty( $options ) ) data-options="{{ Fn::stringify(
-    [ "data" => '1111' ]
-) }}"@endif>
+<div class="page-datalist" data-plugin="datatable"@if ( !empty( $options ) ) data-options="{{ Fn::stringify([
+    "data" => '1111',
+    "token" => csrf_token(),
+]) }}"@endif>
 
     {{-- Datalist -> Header --}}
     <div class="page-datalist-header layout__box fixed">
